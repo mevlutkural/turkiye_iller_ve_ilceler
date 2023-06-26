@@ -989,12 +989,7 @@ class DistrictSeeder extends Seeder
         ];
 
         foreach ($districts as $district) {
-            District::create([
-                'district_id'   => $district['district_id'],
-                'district_name' => $district['district_name'],
-                'city_id'       => $district['city_id'],
-                'city_name'     => $district['city_name']
-            ]);
+            District::create($district);
         }
     }
 }
