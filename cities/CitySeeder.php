@@ -97,10 +97,7 @@ class CitySeeder extends Seeder
         ];
 
         foreach ($cities as $city) {
-            City::create([
-                'city_id'   => $city['city_id'],
-                'city_name' => $city['city_name'],
-            ]);
+            City::create($city);
         }
     }
 }
